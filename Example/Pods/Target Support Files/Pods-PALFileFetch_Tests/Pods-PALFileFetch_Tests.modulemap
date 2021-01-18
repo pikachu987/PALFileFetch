@@ -1,0 +1,6 @@
+framework module Pods_PALFileFetch_Tests {
+  umbrella header "Pods-PALFileFetch_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

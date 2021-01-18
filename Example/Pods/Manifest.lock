@@ -1,0 +1,16 @@
+PODS:
+  - PALFileFetch (0.1.0)
+
+DEPENDENCIES:
+  - PALFileFetch (from `../`)
+
+EXTERNAL SOURCES:
+  PALFileFetch:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PALFileFetch: 9bef9dbc7939c63cb49ef2d9d460f6b519172266
+
+PODFILE CHECKSUM: 6147c6025b50ec64a4a9449c4fe3fd2198a8d06c
+
+COCOAPODS: 1.10.0

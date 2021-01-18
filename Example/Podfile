@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'PALFileFetch_Example' do
+  pod 'PALFileFetch', :path => '../'
+
+  target 'PALFileFetch_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
