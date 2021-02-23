@@ -435,6 +435,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 0.1.1;
 				MODULEMAP_FILE = "Target Support Files/PALFileFetch/PALFileFetch.modulemap";
 				PRODUCT_MODULE_NAME = PALFileFetch;
 				PRODUCT_NAME = PALFileFetch;
@@ -697,6 +698,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 0.1.1;
 				MODULEMAP_FILE = "Target Support Files/PALFileFetch/PALFileFetch.modulemap";
 				PRODUCT_MODULE_NAME = PALFileFetch;
 				PRODUCT_NAME = PALFileFetch;

@@ -25,6 +25,7 @@ open class FileDownloader: NSObject {
     private let downloadURL: URL
     private let folderName: String
     private let fileName: String
+    private var saveFolder: URL?
     private let saveURL: URL
     public var progress: Double = 0
 
@@ -47,6 +48,7 @@ open class FileDownloader: NSObject {
             }
         }
         if folderName != "" && fileName != "" {
+            self.saveFolder = saveURL.appendingPathComponent(self.folderName)
             saveURL.appendPathComponent("\(self.folderName)/\(self.fileName)")
         }
         self.saveURL = saveURL
@@ -73,6 +75,12 @@ open class FileDownloader: NSObject {
 // MARK: URLSessionDownloadDelegate
 extension FileDownloader: URLSessionDownloadDelegate {
     public func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+        if let saveFolder = self.saveFolder {
+            let fileManager = FileManager.default
+            if !fileManager.fileExists(atPath: self.saveURL.path, isDirectory: nil) {
+                try? fileManager.createDirectory(atPath: saveFolder.path, withIntermediateDirectories: true, attributes: nil)
+            }
+        }
         try? FileManager.default.moveItem(at: location, to: self.saveURL)
         DispatchQueue.main.async {
             self.completeHandler?(.init(url: self.saveURL, error: nil))
